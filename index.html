@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--projecttitle--><title>ujicoba_web360</title><!--projecttitle-end-->
+		<!--projectdescription--><meta name="description" content="Baruuuuurururuurru"><!--projectdescription-end-->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+		
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<!-- Insert this line above script imports  -->
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		
+		<script src="imagedata.js"></script>
+		<script src="jquery.js"></script>
+		<script src="three.min.js"></script>
+		<script src="panolens.min.js"></script>
+		
+		<!-- Insert this line after script imports -->
+		<script>if (window.module) module = window.module;</script>
+		
+		<style>
+		
+			
+						
+			/* SCROLLBAR STYLING */
+			/* width */
+			::-webkit-scrollbar {
+				width: 0.25em;
+				height: 0.25em;
+			}
+			/* Track */
+			::-webkit-scrollbar-track {
+				background: #2c3643; 
+			}
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+				background: #0d9e59; 
+				transition: background .5s;
+			}
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+				background: #00e075; 
+			}
+
+
+			html, body {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background-color: #000;
+				color; black;
+			}
+
+			a:link, a:visited{
+				color: #bdc3c7;	
+			}
+
+			.fullwrapper{
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: black;
+			}
+			
+			#container {
+                width: 100%;
+                height: 100%;
+            }
+			
+			#tmp{
+				position: fixed;
+				top: 0;
+				left: 0; 
+				right: 0;
+				bottom: 0;
+				padding: 3em;
+				background-color: rgba(0,0,0,.5);
+				backdrop-filter: blur(5px);
+				display: none;
+			}
+		</style>
+	</head>
+	<body id="body">
+	    <div id="container" style="color: black;"></div>
+    	
+		
+		
+		<!--customhtml--><div class='customhotspot' id='PANO_20220727_165633_1sBRtF'></div><div class='customhotspot' id='PANO_20220727_165633_2'></div><div class='customhotspot' id='PANO_20220727_165633_3'></div><div class='customhotspot' id='PANO_20220727_165633_4'></div><div class='customhotspot' id='PANO_20220727_165633_5'></div><div class='customhotspot' id='PANO_20220727_165633_6'></div><div class='customhotspot' id='PANO_20220727_165633_7'></div><div class='customhotspot' id='PANO_20220727_165633_8'></div><!--customhtml-end-->
+		
+		<div id="tmp">
+			<div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;" id="tmpcontent"></div>
+			<div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
+		</div>
+
+		<div id="loading" class="fullwrapper" style="display: table; width: 100%; height: 100%;">
+    		<div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
+    			<!--loadingtext-->Loading...<!--loadingtext-end-->
+    		</div>
+    	</div>
+		
+    	<script>
+			
+            var container = document.querySelector( '#container' );
+			/*panolens*/
+var viewer = new PANOLENS.Viewer( { container: container , controlBar: false,  output: 'console' , autoHideInfospot: false, } );
+/*panolens-end*/
+			
+			viewer.addUpdateCallback(function(){});
+			
+			/*panoramas*/
+var PANO_20220727_165633_1sBRtF = new PANOLENS.ImagePanorama( "panoramas/PANO_20220727_165633_1sBRtF.jpg" );
+			PANO_20220727_165633_1sBRtF.addEventListener('progress', function(e){
+				$("#loading").show();
+			});
+			PANO_20220727_165633_1sBRtF.addEventListener('load', function(e){
+				$("#loading").fadeOut();
+			});
+			PANO_20220727_165633_1sBRtF.addEventListener('click', function(e){
+			});
+
+var infospotPANO_20220727_165633_1sBRtF0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_1sBRtF0.position.set( 4979.34, 324.12, -151.19 );
+					PANO_20220727_165633_1sBRtF.add(infospotPANO_20220727_165633_1sBRtF0);
+infospotPANO_20220727_165633_1sBRtF0.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_2');
+ChangePanorama('PANO_20220727_165633_2');
+});
+viewer.add( PANO_20220727_165633_1sBRtF );
+var PANO_20220727_165633_2 = new PANOLENS.ImagePanorama( "panoramas/PANO_20220727_165633_2.jpg" );
+			PANO_20220727_165633_2.addEventListener('progress', function(e){
+				$("#loading").show();
+			});
+			PANO_20220727_165633_2.addEventListener('load', function(e){
+				$("#loading").fadeOut();
+			});
+			PANO_20220727_165633_2.addEventListener('click', function(e){
+			});
+
+var infospotPANO_20220727_165633_20 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_20.position.set( 4807.72, -44.67, -1342.61 );
+					PANO_20220727_165633_2.add(infospotPANO_20220727_165633_20);
+infospotPANO_20220727_165633_20.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_3');
+ChangePanorama('PANO_20220727_165633_3');
+ChangePanorama('PANO_20220727_165633_3');
+ChangePanorama('PANO_20220727_165633_3');
+});
+var infospotPANO_20220727_165633_21 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_21.position.set( -4948.18, 349.08, -589.32 );
+					PANO_20220727_165633_2.add(infospotPANO_20220727_165633_21);
+infospotPANO_20220727_165633_21.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_1sBRtF');
+ChangePanorama('PANO_20220727_165633_1sBRtF');
+});
+viewer.add( PANO_20220727_165633_2 );
+var PANO_20220727_165633_3 = new PANOLENS.ImagePanorama( "panoramas/PANO_20220727_165633_3.jpg" );
+			PANO_20220727_165633_3.addEventListener('progress', function(e){
+				$("#loading").show();
+			});
+			PANO_20220727_165633_3.addEventListener('load', function(e){
+				$("#loading").fadeOut();
+			});
+			PANO_20220727_165633_3.addEventListener('click', function(e){
+			});
+
+var infospotPANO_20220727_165633_30 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_30.position.set( 20.54, -148.91, -4993.07 );
+					PANO_20220727_165633_3.add(infospotPANO_20220727_165633_30);
+infospotPANO_20220727_165633_30.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_4');
+ChangePanorama('PANO_20220727_165633_4');
+ChangePanorama('PANO_20220727_165633_6');
+ChangePanorama('PANO_20220727_165633_6');
+});
+var infospotPANO_20220727_165633_31 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_31.position.set( 2075.94, -288.33, -4533.50 );
+					PANO_20220727_165633_3.add(infospotPANO_20220727_165633_31);
+infospotPANO_20220727_165633_31.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_8');
+ChangePanorama('PANO_20220727_165633_8');
+});
+var infospotPANO_20220727_165633_32 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_32.position.set( -2910.69, -576.00, -4019.18 );
+					PANO_20220727_165633_3.add(infospotPANO_20220727_165633_32);
+infospotPANO_20220727_165633_32.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_8');
+ChangePanorama('PANO_20220727_165633_6');
+ChangePanorama('PANO_20220727_165633_6');
+});
+var infospotPANO_20220727_165633_33 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_33.position.set( -2805.51, 136.04, 4125.36 );
+					PANO_20220727_165633_3.add(infospotPANO_20220727_165633_33);
+infospotPANO_20220727_165633_33.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_2');
+ChangePanorama('PANO_20220727_165633_2');
+});
+viewer.add( PANO_20220727_165633_3 );
+var PANO_20220727_165633_4 = new PANOLENS.ImagePanorama( "panoramas/PANO_20220727_165633_4.jpg" );
+			PANO_20220727_165633_4.addEventListener('progress', function(e){
+				$("#loading").show();
+			});
+			PANO_20220727_165633_4.addEventListener('load', function(e){
+				$("#loading").fadeOut();
+			});
+			PANO_20220727_165633_4.addEventListener('click', function(e){
+			});
+
+var infospotPANO_20220727_165633_40 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_40.position.set( 4400.04, -1477.55, 1841.67 );
+					PANO_20220727_165633_4.add(infospotPANO_20220727_165633_40);
+infospotPANO_20220727_165633_40.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_6');
+ChangePanorama('PANO_20220727_165633_6');
+});
+var infospotPANO_20220727_165633_41 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_41.position.set( 4798.05, -1268.15, 561.16 );
+					PANO_20220727_165633_4.add(infospotPANO_20220727_165633_41);
+infospotPANO_20220727_165633_41.addEventListener('click', function(){
+showMedia(1, 'images/20220731_184423.jpg');
+showMedia(1, 'images/20220731_184423.jpg');
+});
+var infospotPANO_20220727_165633_42 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_42.position.set( 4374.23, -623.99, -2319.21 );
+					PANO_20220727_165633_4.add(infospotPANO_20220727_165633_42);
+infospotPANO_20220727_165633_42.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_6');
+ChangePanorama('PANO_20220727_165633_6');
+});
+var infospotPANO_20220727_165633_43 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_43.position.set( -3749.14, 68.93, -3300.09 );
+					PANO_20220727_165633_4.add(infospotPANO_20220727_165633_43);
+infospotPANO_20220727_165633_43.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_6');
+ChangePanorama('PANO_20220727_165633_6');
+});
+var infospotPANO_20220727_165633_44 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_44.position.set( -602.23, -648.66, -4913.74 );
+					PANO_20220727_165633_4.add(infospotPANO_20220727_165633_44);
+infospotPANO_20220727_165633_44.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_3');
+ChangePanorama('PANO_20220727_165633_3');
+});
+var infospotPANO_20220727_165633_45 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_45.position.set( 887.24, -1045.97, -4799.57 );
+					PANO_20220727_165633_4.add(infospotPANO_20220727_165633_45);
+infospotPANO_20220727_165633_45.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_2');
+ChangePanorama('PANO_20220727_165633_2');
+});
+viewer.add( PANO_20220727_165633_4 );
+var PANO_20220727_165633_5 = new PANOLENS.ImagePanorama( "panoramas/PANO_20220727_165633_5.jpg" );
+			PANO_20220727_165633_5.addEventListener('progress', function(e){
+				$("#loading").show();
+			});
+			PANO_20220727_165633_5.addEventListener('load', function(e){
+				$("#loading").fadeOut();
+			});
+			PANO_20220727_165633_5.addEventListener('click', function(e){
+			});
+
+var infospotPANO_20220727_165633_50 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_50.position.set( -2764.68, -221.60, -4147.87 );
+					PANO_20220727_165633_5.add(infospotPANO_20220727_165633_50);
+infospotPANO_20220727_165633_50.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_6');
+ChangePanorama('PANO_20220727_165633_6');
+});
+var infospotPANO_20220727_165633_51 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_51.position.set( 770.60, -421.92, -4914.21 );
+					PANO_20220727_165633_5.add(infospotPANO_20220727_165633_51);
+infospotPANO_20220727_165633_51.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_3');
+ChangePanorama('PANO_20220727_165633_3');
+});
+var infospotPANO_20220727_165633_52 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_52.position.set( 2180.48, -300.10, -4479.72 );
+					PANO_20220727_165633_5.add(infospotPANO_20220727_165633_52);
+infospotPANO_20220727_165633_52.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_2');
+ChangePanorama('PANO_20220727_165633_2');
+});
+var infospotPANO_20220727_165633_53 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_53.position.set( 4976.29, -118.60, 363.55 );
+					PANO_20220727_165633_5.add(infospotPANO_20220727_165633_53);
+infospotPANO_20220727_165633_53.addEventListener('click', function(){
+showMedia(1, 'images/20220731_184423.jpg');
+showMedia(1, 'images/20220731_184423.jpg');
+});
+var infospotPANO_20220727_165633_54 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_54.position.set( 4757.26, -236.69, 1501.83 );
+					PANO_20220727_165633_5.add(infospotPANO_20220727_165633_54);
+infospotPANO_20220727_165633_54.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_6');
+ChangePanorama('PANO_20220727_165633_6');
+});
+var infospotPANO_20220727_165633_55 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_55.position.set( 4813.87, -350.46, -1273.30 );
+					PANO_20220727_165633_5.add(infospotPANO_20220727_165633_55);
+infospotPANO_20220727_165633_55.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_6');
+ChangePanorama('PANO_20220727_165633_6');
+});
+var infospotPANO_20220727_165633_56 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_56.position.set( -1579.45, -360.85, 4726.93 );
+					PANO_20220727_165633_5.add(infospotPANO_20220727_165633_56);
+infospotPANO_20220727_165633_56.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_8');
+ChangePanorama('PANO_20220727_165633_8');
+});
+viewer.add( PANO_20220727_165633_5 );
+var PANO_20220727_165633_6 = new PANOLENS.ImagePanorama( "panoramas/PANO_20220727_165633_6.jpg" );
+			PANO_20220727_165633_6.addEventListener('progress', function(e){
+				$("#loading").show();
+			});
+			PANO_20220727_165633_6.addEventListener('load', function(e){
+				$("#loading").fadeOut();
+			});
+			PANO_20220727_165633_6.addEventListener('click', function(e){
+			});
+
+var infospotPANO_20220727_165633_60 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_60.position.set( -4560.12, -1562.76, -1304.05 );
+					PANO_20220727_165633_6.add(infospotPANO_20220727_165633_60);
+infospotPANO_20220727_165633_60.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_5');
+ChangePanorama('PANO_20220727_165633_5');
+});
+viewer.add( PANO_20220727_165633_6 );
+var PANO_20220727_165633_7 = new PANOLENS.ImagePanorama( "panoramas/PANO_20220727_165633_7.jpg" );
+			PANO_20220727_165633_7.addEventListener('progress', function(e){
+				$("#loading").show();
+			});
+			PANO_20220727_165633_7.addEventListener('load', function(e){
+				$("#loading").fadeOut();
+			});
+			PANO_20220727_165633_7.addEventListener('click', function(e){
+			});
+
+var infospotPANO_20220727_165633_70 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_70.position.set( 4108.30, -777.35, 2729.76 );
+					PANO_20220727_165633_7.add(infospotPANO_20220727_165633_70);
+infospotPANO_20220727_165633_70.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_5');
+ChangePanorama('PANO_20220727_165633_5');
+});
+viewer.add( PANO_20220727_165633_7 );
+var PANO_20220727_165633_8 = new PANOLENS.ImagePanorama( "panoramas/PANO_20220727_165633_8.jpg" );
+			PANO_20220727_165633_8.addEventListener('progress', function(e){
+				$("#loading").show();
+			});
+			PANO_20220727_165633_8.addEventListener('load', function(e){
+				$("#loading").fadeOut();
+			});
+			PANO_20220727_165633_8.addEventListener('click', function(e){
+			});
+
+var infospotPANO_20220727_165633_80 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_80.position.set( -2338.29, -56.86, 4410.02 );
+					PANO_20220727_165633_8.add(infospotPANO_20220727_165633_80);
+infospotPANO_20220727_165633_80.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_4');
+});
+var infospotPANO_20220727_165633_81 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+					infospotPANO_20220727_165633_81.position.set( -3976.37, -801.96, 2919.86 );
+					PANO_20220727_165633_8.add(infospotPANO_20220727_165633_81);
+infospotPANO_20220727_165633_81.addEventListener('click', function(){
+ChangePanorama('PANO_20220727_165633_7');
+ChangePanorama('PANO_20220727_165633_7');
+});
+viewer.add( PANO_20220727_165633_8 );
+$(document).ready(function(){ ChangePanorama('PANO_20220727_165633_1sBRtF '); });
+
+/*panoramas-end*/
+            
+			
+			function hideTemp(){
+				$("#tmp").fadeOut();
+				setTimeout(function(){
+					$("#tmpcontent").html("");
+				},1000);
+			}
+			
+			function showMedia(type, content){
+				switch(type){
+					case 1 :
+						//Image
+						$("#tmpcontent").html("<img src='"+content+"' style='width: 100%;'>");
+						$("#tmp").fadeIn();
+						break;
+					case 2 :
+						//Video
+						$("#tmpcontent").html("<video id='webvideo' controls autoplay style='width: 100%; height: 100%;'><source src='" +content+ "' type='video/mp4'> Your browser does not support the video tag. </video>");
+						$("#tmp").fadeIn();
+						break;
+					case 3 :
+						//Audio
+						$("#tmpcontent").html("<audio controls style='width: 100%;'><source src='"+content+"' type='audio/ogg'>Your browser does not support the audio tag.</audio>");
+						$("#tmp").fadeIn();
+						break;
+					case 4 :
+						//PDF
+						$("#tmpcontent").html("<iframe src='pdfjs/web/viewer.html?file=../../"+content+"' style='width: 100%; height: 99%;'></iframe>");
+						$("#tmp").fadeIn();
+						break;
+				}
+			}
+			
+			
+			
+			//Update Callback
+			viewer.addUpdateCallback(function(){
+				
+				/*viewerupdatecallback*/
+if(viewer.panorama == PANO_20220727_165633_1sBRtF){
+}
+
+if(viewer.panorama == PANO_20220727_165633_2){
+}
+
+if(viewer.panorama == PANO_20220727_165633_3){
+}
+
+if(viewer.panorama == PANO_20220727_165633_4){
+}
+
+if(viewer.panorama == PANO_20220727_165633_5){
+}
+
+if(viewer.panorama == PANO_20220727_165633_6){
+}
+
+if(viewer.panorama == PANO_20220727_165633_7){
+}
+
+if(viewer.panorama == PANO_20220727_165633_8){
+}
+/*viewerupdatecallback-end*/
+				
+				
+			});
+			
+			
+			
+			var hotspotsvisible = true;
+			function ShowMyInfospot(hs, elid){
+				var thehs = toScreenPosition(hs);
+				if(thehs.z < 1){
+					$("#" + elid).css({
+						"top" : (thehs.y - ($("#" + elid).height()/2)) + "px",
+						"left" : (thehs.x - ($("#" + elid).width()/2)) + "px",
+					});
+					if(hotspotsvisible)
+						$("#" + elid).show();
+				}else{
+					$("#" + elid).hide();
+				}
+				
+			}
+			
+			function toScreenPosition(obj)
+			{
+				var vector = new THREE.Vector3();
+				var widthHalf = 0.5 * innerWidth;
+				var heightHalf = 0.5 * innerHeight;
+				
+				//obj.updateMatrixWorld();				
+				vector.setFromMatrixPosition(obj.matrixWorld);
+				
+				
+				vector.project(viewer.camera);
+
+				vector.x = ( vector.x * widthHalf ) + widthHalf;
+				vector.y = - ( vector.y * heightHalf ) + heightHalf;
+
+				
+				return { 
+					x: vector.x,
+					y: vector.y,
+					z: vector.z,
+				};
+
+			};
+			
+			var currentPanorama;
+			function ChangePanorama(panorama){
+				currentPanorama = panorama;
+				HideInfospots(); 
+				//$("#loading").fadeIn();
+				//$(".customhotspot").fadeOut();
+				setTimeout(function(){
+					viewer.setPanorama(window[panorama]);
+				}, 500);
+				setTimeout(function(){
+					$("#" + panorama).fadeIn();
+				}, 1500);
+				
+			}
+			
+			function HideInfospots(){
+				$(".customhotspot").fadeOut();
+			}
+
+			/*customjs*//*customjs-end*/
+        </script>
+	</body>
+</html>
